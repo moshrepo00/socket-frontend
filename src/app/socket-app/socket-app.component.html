@@ -1,6 +1,21 @@
-<p>socket-app works!</p>
+<p>Commit History</p>
+
+<table>
+  <td *ngFor="let commit of commits">
+    <tr>
+      {{commit.author}}
+    </tr>
+    <tr>
+      {{commit.message}}
+    </tr>
+    <tr>
+      {{commit.time}}
+    </tr>
+    <tr>
+      {{commit.hash}}
+    </tr>
+  </td>
+</table>
 
 
-<button (click)="socketEmit()">
-  TEST BUTTON
-</button>
+
