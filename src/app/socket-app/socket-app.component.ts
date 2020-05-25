@@ -25,6 +25,7 @@ export class SocketAppComponent implements OnInit {
   ngOnInit() {
     this.http.get(this.endpoint).subscribe(data => this.commits = data);
     this.currentMessage.subscribe((messages) => {
+      console.log('latest messages', messages);
       this.commits = messages;
     });
   }
