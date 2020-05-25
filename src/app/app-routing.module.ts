@@ -4,10 +4,6 @@ import {SocketAppComponent} from './socket-app/socket-app.component';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'socket'
-  },
-  {
     path: 'socket',
     component: SocketAppComponent
   }
