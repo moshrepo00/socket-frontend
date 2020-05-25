@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {SocketIoModule, SocketIoConfig} from 'ngx-socket-io';
+import { SocketAppComponent } from './socket-app/socket-app.component';
+
+const config: SocketIoConfig = { url: 'https://fathomless-badlands-40049.herokuapp.com', options: {} };
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SocketAppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocketIoModule.forRoot(config),
   ],
   providers: [],
   bootstrap: [AppComponent]
