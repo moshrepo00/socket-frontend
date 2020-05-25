@@ -12,6 +12,8 @@ export class SocketAppComponent implements OnInit {
 
   commits: any;
 
+  env = 'https://fathomless-badlands-40049.herokuapp.com/commits';
+
   constructor(private socket: Socket) {
   }
   // socketEmit() {
@@ -20,8 +22,11 @@ export class SocketAppComponent implements OnInit {
   // }
 
   ngOnInit() {
-    this.currentMessage.subscribe((message) => {
-      console.log(message);
+
+
+
+    this.currentMessage.subscribe((messages) => {
+      this.commits = messages;
     });
   }
 
