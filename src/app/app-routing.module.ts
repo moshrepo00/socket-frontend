@@ -4,6 +4,11 @@ import {SocketAppComponent} from './socket-app/socket-app.component';
 
 const routes: Routes = [
   {
+    path: '',
+    redirectTo: 'socket',
+    pathMatch: 'full'
+  },
+  {
     path: 'socket',
     component: SocketAppComponent
   }
