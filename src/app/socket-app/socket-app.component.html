@@ -1,46 +1,19 @@
 <p>Commit History</p>
 
-<div>
-
+<div class="container" *ngFor="let commit of commits">
+  <div>
+    Author: {{commit?.author}}
+  </div>
+  <div>
+    Message: {{commit?.message}}
+  </div>
+  <div>
+    Time: {{commit?.time}}
+  </div>
+  <div>
+    Hash: {{commit?.hash}}
+  </div>
 </div>
-
-<table>
-
-  <td *ngFor="let commit of commits">
-    <tr>
-      <td>
-        Author:
-      </td>
-      <td>
-        {{commit.author}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Message:
-      </td>
-      <td>
-        {{commit.message}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Time:
-      </td>
-      <td>
-        {{commit.time}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Hash:
-      </td>
-      <td>
-        {{commit.hash}}
-      </td>
-    </tr>
-  </td>
-</table>
 
 
 

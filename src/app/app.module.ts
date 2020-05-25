@@ -7,7 +7,7 @@ import {SocketIoModule, SocketIoConfig} from 'ngx-socket-io';
 import { SocketAppComponent } from './socket-app/socket-app.component';
 import {HttpClientModule} from '@angular/common/http';
 
-const config: SocketIoConfig = { url: 'https://fathomless-badlands-40049.herokuapp.com', options: {} };
+const config: SocketIoConfig = { url: 'http://localhost:8080', options: {} };
 
 
 @NgModule({
