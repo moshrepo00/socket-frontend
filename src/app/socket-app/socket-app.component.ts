@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Socket} from 'ngx-socket-io';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-socket-app',
@@ -12,9 +13,9 @@ export class SocketAppComponent implements OnInit {
 
   commits: any;
 
-  env = 'https://fathomless-badlands-40049.herokuapp.com/commits';
+  endpoint = 'https://fathomless-badlands-40049.herokuapp.com/commits';
 
-  constructor(private socket: Socket) {
+  constructor(private socket: Socket, private http: HttpClient) {
   }
   // socketEmit() {
   //   this.socket.emit('getCommit');
@@ -22,9 +23,7 @@ export class SocketAppComponent implements OnInit {
   // }
 
   ngOnInit() {
-
-
-
+    this.http.get(this.endpoint).subscribe(data => this.commits = data);
     this.currentMessage.subscribe((messages) => {
       this.commits = messages;
     });
