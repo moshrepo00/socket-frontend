@@ -13,7 +13,7 @@ export class SocketAppComponent implements OnInit {
 
   commits: any;
 
-  endpoint = 'https://fathomless-badlands-40049.herokuapp.com/commits';
+  endpoint = 'http://localhost:8080/commits';
 
   constructor(private socket: Socket, private http: HttpClient) {
   }
